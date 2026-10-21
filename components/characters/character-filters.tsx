@@ -12,7 +12,13 @@ import {
 } from "@/components/ui/select";
 
 const STATUS_OPTIONS = ["all", "Alive", "Dead", "unknown"] as const;
-const GENDER_OPTIONS = ["all", "Female", "Male", "Genderless", "unknown"] as const;
+const GENDER_OPTIONS = [
+  "all",
+  "Female",
+  "Male",
+  "Genderless",
+  "unknown",
+] as const;
 
 function updateParam(
   params: URLSearchParams,

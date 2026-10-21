@@ -34,7 +34,11 @@ export default function CharacterDetailPage({
   );
 }
 
-async function CharacterDetail({ params }: { params: Promise<{ id: string }> }) {
+async function CharacterDetail({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = await params;
   const characterId = Number(id);
 
@@ -55,7 +59,9 @@ async function CharacterDetail({ params }: { params: Promise<{ id: string }> }) 
 
       <div className="flex flex-1 flex-col gap-4">
         <div className="flex items-start justify-between gap-3">
-          <h1 className="font-heading text-2xl font-semibold">{character.name}</h1>
+          <h1 className="font-heading text-2xl font-semibold">
+            {character.name}
+          </h1>
           <FavoriteButton characterId={character.id} />
         </div>
 
