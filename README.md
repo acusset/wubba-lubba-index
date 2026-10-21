@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Wubba Lubba Index
 
-## Getting Started
+> **Demo app.** This project was built as live material for a **kandev** presentation. It's meant to be explored, changed and broken on stage, not used in production.
 
-First, run the development server:
+A small Next.js app for browsing characters from the public [Rick and Morty API](https://rickandmortyapi.com). It's a realistic codebase for showing development workflows live: it's big enough to be interesting and small enough to follow.
+
+## What it does
+
+- **Browse characters:** a paginated grid of every character in the show
+- **Search and filter:** by name, status and gender, kept in the URL
+- **Character details:** a page for each character at `/characters/[id]`
+- **Favorites:** star characters and find them again at `/favorites` (saved in the browser's localStorage)
+- **Light and dark themes**
+
+## Stack
+
+- [Next.js 16](https://nextjs.org) (App Router, Cache Components)
+- React 19, TypeScript
+- Tailwind CSS 4 and [shadcn/ui](https://ui.shadcn.com) components on Base UI
+- [SWR](https://swr.vercel.app) for client-side fetching, [Zod](https://zod.dev) to validate API responses
+
+No API key or environment variables are needed: the Rick and Morty API is public.
+
+## Running it
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project layout
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/                 routes: home, /characters, /characters/[id], /favorites
+components/
+  characters/        character cards, filters, pagination, favorite button
+  layout/            nav bar
+  ui/                shadcn/ui primitives
+hooks/               use-favorites
+lib/rickandmorty/    API client and Zod schemas
+```
 
-## Learn More
+## Disclaimer
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This is an unofficial fan project for demo purposes. It isn't affiliated with Adult Swim or the creators of *Rick and Morty*. Character data and images come from the [Rick and Morty API](https://rickandmortyapi.com).

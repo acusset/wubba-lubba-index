@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rick and Morty Characters",
+  title: "Wubba Lubba Index",
   description: "Browse, search, and favorite Rick and Morty characters.",
 };
 

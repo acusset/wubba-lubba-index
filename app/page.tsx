@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="flex flex-1 flex-col items-center justify-center gap-6 px-6 text-center">
       <h1 className="font-heading text-4xl font-semibold tracking-tight">
-        Rick and Morty Characters
+        Wubba Lubba Index
       </h1>
       <p className="text-muted-foreground max-w-md">
         Browse, search, and favorite every character pulled live from the{" "}
