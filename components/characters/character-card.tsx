@@ -28,7 +28,10 @@ export function CharacterCard({ character }: { character: Character }) {
       </div>
       <CardContent className="flex flex-col gap-2">
         <CardTitle>
-          <Link href={`/characters/${character.id}`} className="hover:underline">
+          <Link
+            href={`/characters/${character.id}`}
+            className="hover:underline"
+          >
             {character.name}
           </Link>
         </CardTitle>

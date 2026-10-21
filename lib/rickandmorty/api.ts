@@ -28,7 +28,8 @@ function buildCharacterQuery(filters: CharacterFilters): string {
   if (filters.status) params.set("status", filters.status);
   if (filters.species) params.set("species", filters.species);
   if (filters.gender) params.set("gender", filters.gender);
-  if (filters.page && filters.page > 1) params.set("page", String(filters.page));
+  if (filters.page && filters.page > 1)
+    params.set("page", String(filters.page));
   const query = params.toString();
   return query ? `?${query}` : "";
 }
@@ -37,7 +38,9 @@ function buildCharacterQuery(filters: CharacterFilters): string {
 export async function getCharacters(
   filters: CharacterFilters = {},
 ): Promise<CharacterListResponse> {
-  const res = await fetch(`${BASE_URL}/character${buildCharacterQuery(filters)}`);
+  const res = await fetch(
+    `${BASE_URL}/character${buildCharacterQuery(filters)}`,
+  );
 
   if (res.status === 404) return EMPTY_LIST;
   if (!res.ok) {
@@ -67,7 +70,9 @@ export async function getCharactersByIds(ids: number[]): Promise<Character[]> {
 
   if (res.status === 404) return [];
   if (!res.ok) {
-    throw new Error(`Failed to fetch characters [${ids.join(",")}] (${res.status})`);
+    throw new Error(
+      `Failed to fetch characters [${ids.join(",")}] (${res.status})`,
+    );
   }
 
   const data = await res.json();

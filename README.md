@@ -44,4 +44,4 @@ lib/rickandmorty/    API client and Zod schemas
 
 ## Disclaimer
 
-This is an unofficial fan project for demo purposes. It isn't affiliated with Adult Swim or the creators of *Rick and Morty*. Character data and images come from the [Rick and Morty API](https://rickandmortyapi.com).
+This is an unofficial fan project for demo purposes. It isn't affiliated with Adult Swim or the creators of _Rick and Morty_. Character data and images come from the [Rick and Morty API](https://rickandmortyapi.com).

@@ -3,8 +3,14 @@ import { CharacterCard } from "@/components/characters/character-card";
 import { CharacterFilters } from "@/components/characters/character-filters";
 import { CharacterPagination } from "@/components/characters/character-pagination";
 import { CharactersGridSkeleton } from "@/components/characters/characters-grid-skeleton";
-import { getCharacters, type CharacterFilters as Filters } from "@/lib/rickandmorty/api";
-import type { CharacterGender, CharacterStatus } from "@/lib/rickandmorty/schemas";
+import {
+  getCharacters,
+  type CharacterFilters as Filters,
+} from "@/lib/rickandmorty/api";
+import type {
+  CharacterGender,
+  CharacterStatus,
+} from "@/lib/rickandmorty/schemas";
 
 type SearchParams = {
   name?: string;

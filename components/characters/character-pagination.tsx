@@ -7,7 +7,10 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 
-function hrefForPage(searchParams: Record<string, string | undefined>, page: number) {
+function hrefForPage(
+  searchParams: Record<string, string | undefined>,
+  page: number,
+) {
   const params = new URLSearchParams();
   for (const [key, value] of Object.entries(searchParams)) {
     if (value) params.set(key, value);
@@ -47,7 +50,9 @@ export function CharacterPagination({
           <PaginationNext
             href={hrefForPage(searchParams, Math.min(totalPages, page + 1))}
             aria-disabled={page >= totalPages}
-            className={page >= totalPages ? "pointer-events-none opacity-50" : undefined}
+            className={
+              page >= totalPages ? "pointer-events-none opacity-50" : undefined
+            }
           />
         </PaginationItem>
       </PaginationContent>
