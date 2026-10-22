@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FavoritesLink } from "@/components/layout/favorites-link";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export function NavBar() {
@@ -12,9 +13,7 @@ export function NavBar() {
           <Link href="/characters" className="hover:underline">
             Characters
           </Link>
-          <Link href="/favorites" className="hover:underline">
-            Favorites
-          </Link>
+          <FavoritesLink />
           <ThemeToggle />
         </nav>
       </div>
